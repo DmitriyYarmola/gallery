@@ -1,0 +1,49 @@
+*,
+:after,
+:before
+    box-sizing: border-box
+
+body
+    font-family: Roboto
+    font-style: normal
+    font-weight: normal
+    font-size: 13px
+    margin: 0
+    padding: 0
+    &.scroll
+        overflow: hidden
+    
+.container 
+    margin: 0 auto
+    max-width: 1200px
+    width: 100%
+    text-align: center
+
+.images-list
+    display: grid
+    justify-content: center
+    grid-template-columns: repeat(3, 30%)
+    grid-gap: 10px
+
+.my-node-enter 
+    opacity: 0
+
+.my-node-enter-active 
+    opacity: 1
+    transition: opacity 200ms
+
+.my-node-exit 
+    opacity: 1
+
+.my-node-exit-active 
+    opacity: 0
+    transition: opacity 200ms
+
+
+@media (max-width: 767px) 
+    .images-list
+        grid-template-columns: repeat(2, 50%)
+
+@media (max-width: 536px) 
+    .images-list
+        grid-template-columns: 100%
